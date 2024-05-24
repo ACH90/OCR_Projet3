@@ -1,0 +1,21 @@
+// Variables de couleur
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+// Variables de police
+$font-logo-titles: 'Shrikhand', cursive;
+$font-text: 'Roboto', sans-serif;
+
+// Styles globaux
+body {
+  font-family: $font-text;
+  color: $color-primary;
+  background-color: #fff; // Vous pouvez ajuster cette couleur selon vos besoins
+}
+
+// Styles pour les titres et le logo
+h1, h2, h3, h4, h5, h6, .logo {
+  font-family: $font-logo-titles;
+  color: $color-secondary;
+}
