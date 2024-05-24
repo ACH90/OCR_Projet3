@@ -10,12 +10,6 @@ $font-text: 'Roboto', sans-serif;
 // Styles globaux
 body {
   font-family: $font-text;
-  color: $color-primary;
   background-color: #fff; // Vous pouvez ajuster cette couleur selon vos besoins
 }
 
-// Styles pour les titres et le logo
-h1, h2, h3, h4, h5, h6, .logo {
-  font-family: $font-logo-titles;
-  color: $color-secondary;
-}
