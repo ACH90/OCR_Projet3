@@ -205,3 +205,45 @@ header {
     }
   }
 }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding: 20px;
+
+  img {
+    width: 130px;
+    height: 40px;
+    filter: invert(1);
+    margin-bottom: 16px;
+  }
+
+  i {
+    margin-right: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  li {  
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18.75px;
+    text-align: left;
+    margin-bottom: 7px;
+
+    &.footer500 {
+      font-weight: 500;
+    }
+
+    &.footer400 {
+      font-weight: 400;
+    }
+  }
+}
