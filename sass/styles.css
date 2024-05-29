@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -153,10 +154,33 @@ header img {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
+  display: inline-block; /* Pour s'assurer que la carte est une boîte de bloc */
 }
-.restaurants .cards .card img {
+.restaurants .cards .card .picture {
+  position: relative;
   width: 346px;
-  height: 231px;
+  height: 200px;
+}
+.restaurants .cards .card .picture .new {
+  position: absolute;
+  background-color: #99E2D0;
+  color: #1b6150;
+  font-weight: 500;
+  font-size: 14px;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  top: 15px;
+  left: 250px;
+  z-index: 1;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.restaurants .cards .card .picture img {
+  width: 346px;
+  height: 200px;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
@@ -180,9 +204,13 @@ header img {
   padding-left: 13px;
   padding-bottom: 12px;
 }
-.restaurants .cards .card .infos i {
-  padding-right: 13px;
-  padding-bottom: 12px;
+.restaurants .cards .card .infos .heart {
+  padding-right: 25px;
+  padding-top: 23px;
+}
+.restaurants .cards .card .infos .heart i {
+  width: 22px;
+  height: 21px;
 }
 
 footer {
