@@ -144,6 +144,10 @@ header img {
   gap: 20px;
   padding-top: 20px;
 }
+.restaurants .cards a {
+  text-decoration: none;
+  color: inherit;
+}
 .restaurants .cards .card {
   background-color: white;
   border-radius: 15px;
@@ -156,19 +160,28 @@ header img {
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-.restaurants .cards .card h3 {
+.restaurants .cards .card .infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.restaurants .cards .card .infos h3 {
   font-size: 18px;
   font-weight: 700;
   margin-top: 16px;
   margin-bottom: 5px;
   padding-left: 13px;
 }
-.restaurants .cards .card p {
+.restaurants .cards .card .infos p {
   font-size: 14px;
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 13px;
+  padding-bottom: 12px;
+}
+.restaurants .cards .card .infos i {
+  padding-right: 13px;
   padding-bottom: 12px;
 }
 
@@ -186,6 +199,8 @@ footer img {
   margin-bottom: 16px;
 }
 footer i {
+  width: 11px;
+  height: 13px;
   margin-right: 10px;
 }
 footer ul {
@@ -195,7 +210,6 @@ footer ul {
 }
 footer li {
   font-size: 16px;
-  font-weight: 300;
   line-height: 18.75px;
   text-align: left;
   margin-bottom: 7px;
