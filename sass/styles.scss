@@ -3,7 +3,7 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $unchecked-color: #000000;
-$checked-color:#9356DC;
+$checked-color: #9356DC;
 
 
 // Variables de police
@@ -102,7 +102,7 @@ header {
     &:hover {
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
       background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
-      linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+        linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
 
 
     }
@@ -190,12 +190,12 @@ header {
 
     .card {
       background-color: white;
+      height: 280px;
       border-radius: 15px;
       display: flex;
       flex-direction: column;
-      display: inline-block; /* Pour s'assurer que la carte est une boîte de bloc */
-
-
+      display: inline-block;
+      /* Pour s'assurer que la carte est une boîte de bloc */
 
       .picture {
         position: relative;
@@ -217,7 +217,7 @@ header {
           font-style: normal;
           display: flex;
           align-items: center;
-          justify-content: center;          
+          justify-content: center;
         }
 
         img {
@@ -227,10 +227,6 @@ header {
           border-radius: 20px 20px 0 0;
         }
       }
-
-      
-
-      
 
       .infos {
         display: flex;
@@ -244,7 +240,7 @@ header {
           margin-bottom: 5px;
           padding-left: 13px;
         }
-  
+
         p {
           font-size: 14px;
           font-weight: 300;
@@ -253,50 +249,53 @@ header {
           padding-left: 13px;
           padding-bottom: 12px;
         }
+      }
 
-        .hidden-checkbox {
-          display: none;
-        }
+      .hidden-checkbox {
+        display: none;
+      }
 
-        .checkbox-container {
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        justify-content: right;
+        position: relative;
+        right: 10px;
+        bottom: 55px;
+
+        .checkmark {
           display: flex;
           align-items: center;
-          cursor: pointer;
-      
-          .checkmark {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 22px;
-              height: 21px;
-              position: relative;
-              left: -13px;
+          justify-content: center;
+          width: 22px;
+          height: 21px;
+          position: relative;
+          left: -13px;
 
 
-      
-              .checked {
-                  display: none;
-                  color: $checked-color;
-              }
-      
-              .unchecked {
-                  display: block;
-                  color: $unchecked-color;
-              }
+
+          .checked {
+            display: none;
+            color: $checked-color;
           }
-      }
-      
-      .hidden-checkbox:checked + .checkmark .unchecked {
-          display: none;
-      }
-      
-      .hidden-checkbox:checked + .checkmark .checked {
-          display: block;
+
+          .unchecked {
+            display: block;
+            color: $unchecked-color;
+          }
+        }
       }
 
+      .hidden-checkbox:checked+.checkmark .unchecked {
+        display: none;
+      }
+
+      .hidden-checkbox:checked+.checkmark .checked {
+        display: block;
+      }
     }
   }
-}
 }
 
 footer {
@@ -342,4 +341,3 @@ footer {
     }
   }
 }
-

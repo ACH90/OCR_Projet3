@@ -155,10 +155,12 @@ header img {
 }
 .restaurants .cards .card {
   background-color: white;
+  height: 280px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  display: inline-block; /* Pour s'assurer que la carte est une boîte de bloc */
+  display: inline-block;
+  /* Pour s'assurer que la carte est une boîte de bloc */
 }
 .restaurants .cards .card .picture {
   position: relative;
@@ -208,15 +210,19 @@ header img {
   padding-left: 13px;
   padding-bottom: 12px;
 }
-.restaurants .cards .card .infos .hidden-checkbox {
+.restaurants .cards .card .hidden-checkbox {
   display: none;
 }
-.restaurants .cards .card .infos .checkbox-container {
+.restaurants .cards .card .checkbox-container {
   display: flex;
   align-items: center;
   cursor: pointer;
+  justify-content: right;
+  position: relative;
+  right: 10px;
+  bottom: 55px;
 }
-.restaurants .cards .card .infos .checkbox-container .checkmark {
+.restaurants .cards .card .checkbox-container .checkmark {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,18 +231,18 @@ header img {
   position: relative;
   left: -13px;
 }
-.restaurants .cards .card .infos .checkbox-container .checkmark .checked {
+.restaurants .cards .card .checkbox-container .checkmark .checked {
   display: none;
   color: #9356DC;
 }
-.restaurants .cards .card .infos .checkbox-container .checkmark .unchecked {
+.restaurants .cards .card .checkbox-container .checkmark .unchecked {
   display: block;
   color: #000000;
 }
-.restaurants .cards .card .infos .hidden-checkbox:checked + .checkmark .unchecked {
+.restaurants .cards .card .hidden-checkbox:checked + .checkmark .unchecked {
   display: none;
 }
-.restaurants .cards .card .infos .hidden-checkbox:checked + .checkmark .checked {
+.restaurants .cards .card .hidden-checkbox:checked + .checkmark .checked {
   display: block;
 }
 
