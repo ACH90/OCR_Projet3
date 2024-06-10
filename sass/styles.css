@@ -53,6 +53,12 @@ header img {
   padding-top: 39px;
   font-weight: 700;
 }
+@media screen and (min-width: 1024px) {
+  .explorer h1 {
+    font-size: 40px;
+    width: auto;
+  }
+}
 .explorer p {
   font-size: 18px;
   margin-top: 0;
@@ -60,6 +66,11 @@ header img {
   width: 315px;
   height: 46px;
   font-weight: 300;
+}
+@media screen and (min-width: 1024px) {
+  .explorer p {
+    width: auto;
+  }
 }
 .explorer button {
   background-color: #9356DC;
@@ -87,6 +98,19 @@ header img {
   background-color: white;
   padding: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .function {
+    padding: 1.39% 12.5%;
+  }
+}
+.function h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .function .number {
   width: 24px;
   height: 24px;
@@ -107,6 +131,13 @@ header img {
   margin: 0;
   padding: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .function ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+  }
+}
 .function li {
   display: flex;
   align-items: center;
@@ -114,7 +145,7 @@ header img {
   font-weight: 500;
   line-height: 21.09px;
   text-align: center;
-  width: 322.49px;
+  width: 100%;
   height: 72.38px;
   top: 505px;
   left: 32.51px;
@@ -132,6 +163,11 @@ header img {
 .restaurants {
   background-color: #F6F6F6;
   padding: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    padding: 1.39% 12.5%;
+  }
 }
 .restaurants h2 {
   font-size: 24px;
@@ -153,21 +189,29 @@ header img {
   text-decoration: none;
   color: inherit;
 }
-.restaurants .cards .card {
+@media screen and (min-width: 1024px) {
+  .restaurants .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.restaurants .card {
   background-color: white;
   height: 280px;
+  width: 100%;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   display: inline-block;
   /* Pour s'assurer que la carte est une boîte de bloc */
 }
-.restaurants .cards .card .picture {
+.restaurants .card .picture {
   position: relative;
-  width: 346px;
+  width: 100%;
   height: 200px;
 }
-.restaurants .cards .card .picture .new {
+.restaurants .card .picture .new {
   position: absolute;
   background-color: #99E2D0;
   color: #1b6150;
@@ -177,32 +221,43 @@ header img {
   height: 29px;
   border-radius: 2px;
   top: 15px;
-  left: 250px;
+  left: 75%;
   z-index: 1;
   font-style: normal;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.restaurants .cards .card .picture img {
-  width: 346px;
+.restaurants .card .picture img {
+  width: 100%;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-.restaurants .cards .card .infos {
+@media screen and (min-width: 1024px) {
+  .restaurants .card .picture img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants .card .picture {
+    width: 100%;
+  }
+}
+.restaurants .card .infos {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.restaurants .cards .card .infos h3 {
+.restaurants .card .infos h3 {
   font-size: 18px;
   font-weight: 700;
   margin-top: 16px;
   margin-bottom: 5px;
   padding-left: 13px;
 }
-.restaurants .cards .card .infos p {
+.restaurants .card .infos p {
   font-size: 14px;
   font-weight: 300;
   margin-top: 0;
@@ -210,10 +265,10 @@ header img {
   padding-left: 13px;
   padding-bottom: 12px;
 }
-.restaurants .cards .card .hidden-checkbox {
+.restaurants .card .hidden-checkbox {
   display: none;
 }
-.restaurants .cards .card .checkbox-container {
+.restaurants .card .checkbox-container {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -222,7 +277,7 @@ header img {
   right: 10px;
   bottom: 55px;
 }
-.restaurants .cards .card .checkbox-container .checkmark {
+.restaurants .card .checkbox-container .checkmark {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,19 +286,27 @@ header img {
   position: relative;
   left: -13px;
 }
-.restaurants .cards .card .checkbox-container .checkmark .checked {
+.restaurants .card .checkbox-container .checkmark .checked {
   display: none;
-  color: #9356DC;
+  color: transparent;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
-.restaurants .cards .card .checkbox-container .checkmark .unchecked {
+.restaurants .card .checkbox-container .checkmark .unchecked {
   display: block;
   color: #000000;
 }
-.restaurants .cards .card .hidden-checkbox:checked + .checkmark .unchecked {
+.restaurants .card .hidden-checkbox:checked + .checkmark .unchecked {
   display: none;
 }
-.restaurants .cards .card .hidden-checkbox:checked + .checkmark .checked {
+.restaurants .card .hidden-checkbox:checked + .checkmark .checked {
   display: block;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants .card {
+    width: 40%;
+  }
 }
 
 footer {
@@ -252,12 +315,24 @@ footer {
   background-color: #353535;
   color: white;
   padding: 20px;
+  gap: 20px;
 }
 footer img {
   width: 130px;
   height: 40px;
   filter: invert(1);
   margin-bottom: 16px;
+}
+@media screen and (min-width: 1024px) {
+  footer img {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-list {
+    display: flex;
+    gap: 30px;
+  }
 }
 footer i {
   width: 11px;
@@ -268,6 +343,15 @@ footer ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
 }
 footer li {
   font-size: 16px;
@@ -281,5 +365,16 @@ footer li.footer500 {
 footer li.footer400 {
   font-weight: 400;
 }
+@media screen and (min-width: 1024px) {
+  footer li {
+    margin-bottom: 0;
+  }
+}
 
-/*# sourceMappingURL=styles.css.map */
+@media screen and (min-width: 1024px) {
+  footer {
+    flex-direction: row-reverse;
+    padding: 20px 50px;
+    gap: 30px;
+  }
+}/*# sourceMappingURL=styles.css.map */

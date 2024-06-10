@@ -72,6 +72,13 @@ header {
     font-weight: 700;
   }
 
+  @media screen and (min-width: 1024px) {
+    h1 {
+      font-size: 40px;
+      width: auto;
+    }
+  }
+
   p {
     font-size: 18px;
     margin-top: 0;
@@ -79,6 +86,12 @@ header {
     width: 315px;
     height: 46px;
     font-weight: 300;
+  }
+
+  @media screen and (min-width: 1024px) {
+    p {
+      width: auto;
+    }
   }
 
   button {
@@ -114,6 +127,20 @@ header {
   background-color: white;
   padding: 20px;
 
+  @media screen and (min-width: 1024px) {
+    padding: 1.39% 12.5%;
+    
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   & .number {
     width: 24px;
     height: 24px;
@@ -138,6 +165,14 @@ header {
     padding: 20px;
   }
 
+  @media screen and (min-width: 1024px) {
+    ul {
+      flex-direction: row;
+      justify-content: center;
+      gap: 24px;
+    }
+  }
+
   li {
     display: flex;
     align-items: center;
@@ -145,7 +180,7 @@ header {
     font-weight: 500;
     line-height: 21.09px;
     text-align: center;
-    width: 322.49px;
+    width: 100%;
     height: 72.38px;
     top: 505px;
     left: 32.51px;
@@ -166,6 +201,11 @@ header {
   background-color: #F6F6F6;
   padding: 20px;
 
+  @media screen and (min-width: 1024px) {
+    padding: 1.39% 12.5%;
+    
+  }
+
   h2 {
     font-size: 24px;
     font-weight: 700;
@@ -174,6 +214,7 @@ header {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
 
   .cards {
     display: flex;
@@ -187,116 +228,153 @@ header {
       text-decoration: none;
       color: inherit;
     }
+  }
 
-    .card {
-      background-color: white;
-      height: 280px;
-      border-radius: 15px;
-      display: flex;
-      flex-direction: column;
-      display: inline-block;
-      /* Pour s'assurer que la carte est une boîte de bloc */
+  @media screen and (min-width: 1024px) {
+    .cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      // margin-inline: 180px;
+      // width: 1080px;
 
-      .picture {
-        position: relative;
-        width: 346px;
-        height: 200px;
+    }
+  }
 
-        .new {
-          position: absolute;
-          background-color: $color-tertiary;
-          color: darken($color-tertiary, 50%);
-          font-weight: 500;
-          font-size: 14px;
-          width: 80px;
-          height: 29px;
-          border-radius: 2px;
-          top: 15px;
-          left: 250px;
-          z-index: 1;
-          font-style: normal;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
+  .card {
+    background-color: white;
+    height: 280px;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    /* Pour s'assurer que la carte est une boîte de bloc */
 
-        img {
-          width: 346px;
-          height: 200px;
-          object-fit: cover;
-          border-radius: 20px 20px 0 0;
-        }
-      }
+    .picture {
+      position: relative;
+      width: 100%;
+      height: 200px;
 
-      .infos {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        h3 {
-          font-size: 18px;
-          font-weight: 700;
-          margin-top: 16px;
-          margin-bottom: 5px;
-          padding-left: 13px;
-        }
-
-        p {
-          font-size: 14px;
-          font-weight: 300;
-          margin-top: 0;
-          margin-bottom: 0;
-          padding-left: 13px;
-          padding-bottom: 12px;
-        }
-      }
-
-      .hidden-checkbox {
-        display: none;
-      }
-
-      .checkbox-container {
+      .new {
+        position: absolute;
+        background-color: $color-tertiary;
+        color: darken($color-tertiary, 50%);
+        font-weight: 500;
+        font-size: 14px;
+        width: 80px;
+        height: 29px;
+        border-radius: 2px;
+        top: 15px;
+        left: 75%;
+        z-index: 1;
+        font-style: normal;
         display: flex;
         align-items: center;
-        cursor: pointer;
-        justify-content: right;
+        justify-content: center;
+      }
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+      }
+
+      @media screen and (min-width: 1024px) {
+        img {
+          width: 100%;
+        }
+
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .picture {
+        width: 100%;
+      }
+
+    }
+
+    .infos {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 16px;
+        margin-bottom: 5px;
+        padding-left: 13px;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 13px;
+        padding-bottom: 12px;
+      }
+    }
+
+    .hidden-checkbox {
+      display: none;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      justify-content: right;
+      position: relative;
+      right: 10px;
+      bottom: 55px;
+
+      .checkmark {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 21px;
         position: relative;
-        right: 10px;
-        bottom: 55px;
-
-        .checkmark {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 22px;
-          height: 21px;
-          position: relative;
-          left: -13px;
+        left: -13px;
 
 
 
-          .checked {
-            display: none;
-            color: $checked-color;
-          }
+        .checked {
+          display: none;
+          color: transparent;
+          background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
 
-          .unchecked {
-            display: block;
-            color: $unchecked-color;
-          }
+        .unchecked {
+          display: block;
+          color: $unchecked-color;
         }
       }
+    }
 
-      .hidden-checkbox:checked+.checkmark .unchecked {
-        display: none;
-      }
+    .hidden-checkbox:checked+.checkmark .unchecked {
+      display: none;
+    }
 
-      .hidden-checkbox:checked+.checkmark .checked {
-        display: block;
-      }
+    .hidden-checkbox:checked+.checkmark .checked {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .card {
+      width: 40%;
+
     }
   }
 }
+
 
 footer {
   display: flex;
@@ -304,12 +382,28 @@ footer {
   background-color: #353535;
   color: white;
   padding: 20px;
+  gap: 20px;
 
   img {
     width: 130px;
     height: 40px;
     filter: invert(1);
     margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    img {
+      margin-bottom: 0;
+    }
+    
+  }
+
+  @media screen and (min-width: 1024px) {
+    .footer-list {
+      display: flex;
+      gap: 30px;
+    }
+    
   }
 
   i {
@@ -323,6 +417,17 @@ footer {
     padding: 0;
     margin: 0;
 
+  }
+
+  @media screen and (min-width: 1024px) {
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    
   }
 
   li {
@@ -340,4 +445,20 @@ footer {
 
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    li {
+      margin-bottom: 0;
+    }
+    
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    flex-direction: row-reverse;
+    padding: 20px 50px;
+    gap : 30px;
+  }
+  
 }
