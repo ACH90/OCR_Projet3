@@ -17,6 +17,10 @@ body {
   background-color: #F6F6F6;
 }
 
+* {
+  max-width: 100vw;
+}
+
 //Version mobile (Mobile First)
 
 h2 {
@@ -129,7 +133,7 @@ header {
 
   @media screen and (min-width: 1024px) {
     padding: 1.39% 12.5%;
-    
+
   }
 
   h2 {
@@ -203,7 +207,7 @@ header {
 
   @media screen and (min-width: 1024px) {
     padding: 1.39% 12.5%;
-    
+
   }
 
   h2 {
@@ -395,7 +399,7 @@ footer {
     img {
       margin-bottom: 0;
     }
-    
+
   }
 
   @media screen and (min-width: 1024px) {
@@ -403,7 +407,7 @@ footer {
       display: flex;
       gap: 30px;
     }
-    
+
   }
 
   i {
@@ -427,7 +431,7 @@ footer {
       align-items: center;
       gap: 10px;
     }
-    
+
   }
 
   li {
@@ -450,7 +454,7 @@ footer {
     li {
       margin-bottom: 0;
     }
-    
+
   }
 }
 
@@ -458,7 +462,131 @@ footer {
   footer {
     flex-direction: row-reverse;
     padding: 20px 50px;
-    gap : 30px;
+    gap: 30px;
   }
-  
+
 }
+
+//-------------PAGE RESTAURANT-------------------
+
+.header-restaurant {
+  display: flex;
+
+  a {
+    position: absolute;
+    left: 20px;
+    text-decoration: none;
+    color: black;
+
+    i {
+      font-size: 20px;
+    }
+  }
+}
+
+.main-restaurant {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  h1 {
+    font-family: "Shrikhand";
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  h2 {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18.75px;
+    text-align: left;
+  }
+
+  .restaurant-container {
+    // display: flex;
+    // flex-direction: column;
+    position: relative;
+    padding-inline: 17px;
+    border-radius: 50px 50px 0 0;
+    background-color: #F6F6F6;
+    bottom: 55px;
+  }
+}
+
+.entrees, .plats, .desserts {
+
+  background-color:#F6F6F6;
+
+  h2 {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 18.75px;
+      text-align: left;
+    }
+
+
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.09px;
+    text-align: center;
+    width: 100%;
+    height: 72.38px;
+    top: 505px;
+    left: 32.51px;
+    gap: 0px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    background-color: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    padding-inline: 20px;
+
+    .title-menu {
+      font-family: Roboto;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21.09px;
+      text-align: left;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+    
+    .text-menu {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 16.41px;
+      text-align: left;
+      margin: 0;
+    }
+    
+    .price-menu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      font-family: Roboto;
+      font-size: 15.04px;
+      font-weight: 700;
+      line-height: 17.63px;
+      margin-bottom: 0px;
+      margin-top: 28px;
+    }
+  }
+}
+
