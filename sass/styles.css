@@ -404,7 +404,8 @@ footer li.footer400 {
 .main-restaurant h1 {
   font-family: "Shrikhand";
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
+  font-size: 28px;
 }
 .main-restaurant h2 {
   font-family: Roboto;
@@ -414,13 +415,14 @@ footer li.footer400 {
   text-align: left;
 }
 .main-restaurant .restaurant-container {
+  display: flex;
+  flex-direction: column;
   position: relative;
   padding-inline: 17px;
   border-radius: 50px 50px 0 0;
   background-color: #F6F6F6;
   bottom: 55px;
 }
-
 .entrees, .plats, .desserts {
   background-color: #F6F6F6;
 }
@@ -485,4 +487,50 @@ footer li.footer400 {
   line-height: 17.63px;
   margin-bottom: 0px;
   margin-top: 28px;
+}
+
+.hidden-checkbox {
+  display: none;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: right;
+  position: relative;
+  right: 10px;
+  bottom: 55px;
+}
+.checkbox-container .checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 21px;
+  position: relative;
+  left: -13px;
+  top: 8px;
+}
+.checkbox-container .checkmark .fa-heart {
+  font-size: 20px;
+}
+.checkbox-container .checkmark .checked {
+  display: none;
+  color: transparent;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.checkbox-container .checkmark .unchecked {
+  display: block;
+  color: #000000;
+}
+
+.hidden-checkbox:checked + .checkmark .unchecked {
+  display: none;
+}
+
+.hidden-checkbox:checked + .checkmark .checked {
+  display: block;
 }/*# sourceMappingURL=styles.css.map */

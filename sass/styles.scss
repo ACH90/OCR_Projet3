@@ -493,7 +493,8 @@ footer {
   h1 {
     font-family: "Shrikhand";
     font-weight: 400;
-    font-style: normal;
+    font-style: italic;
+    font-size: 28px;
   }
 
   h2 {
@@ -505,13 +506,17 @@ footer {
   }
 
   .restaurant-container {
-    // display: flex;
-    // flex-direction: column;
+    display: flex;
+    flex-direction: column;
     position: relative;
     padding-inline: 17px;
     border-radius: 50px 50px 0 0;
     background-color: #F6F6F6;
     bottom: 55px;
+
+    .infos {
+
+    }
   }
 }
 
@@ -588,5 +593,56 @@ footer {
       margin-top: 28px;
     }
   }
+}
+
+.hidden-checkbox {
+  display: none;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: right;
+  position: relative;
+  right: 10px;
+  bottom: 55px;
+
+  .checkmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 21px;
+    position: relative;
+    left: -13px;
+    top: 8px;
+
+    .fa-heart {
+      font-size: 20px;
+    }
+
+
+    .checked {
+      display: none;
+      color: transparent;
+      background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .unchecked {
+      display: block;
+      color: $unchecked-color;
+    }
+  }
+}
+
+.hidden-checkbox:checked+.checkmark .unchecked {
+  display: none;
+}
+
+.hidden-checkbox:checked+.checkmark .checked {
+  display: block;
 }
 
