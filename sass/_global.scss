@@ -1,0 +1,23 @@
+// Variables de couleur
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$unchecked-color: #000000;
+$checked-color: #9356DC;
+
+
+// Variables de police
+$font-logo-titles: 'Shrikhand', cursive;
+$font-text: 'Roboto', sans-serif;
+
+// Styles globaux
+body {
+  font-family: $font-text;
+  margin: 0;
+  background-color: #F6F6F6;
+
+}
+
+* {
+  max-width: 100vw;
+}

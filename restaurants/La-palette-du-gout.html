@@ -40,16 +40,25 @@
 
             <div class="menu">
                 <section class="entrees">
-                    <h2>ENTREES</h2>
+                    <h2 class="underline">ENTREES</h2>
                     <ul>
                         <li>
-                            <div>
-                                <h3 class="title-menu">Fricasse d'escargot</h3>
-                                <p class="text-menu">Au piment d'espelette</p>
-                            </div>
-                            <div>
-                                <p class="price-menu">25€</p>
-                            </div>
+                            <input type="checkbox" id="entree1">
+                            <label for="entree1" class="menu-item">
+                                <div>
+                                    <h3 class="title-menu">Fricasse d'escargot</h3>
+                                    <p class="text-menu">Au piment d'espelette</p>
+                                </div>
+                                <div class="div-price-menu-valid">
+                                    <div class="div-price-menu">
+                                        <p class="price-menu">25€</p>
+                                    </div>
+                                    <div class="valid">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </div>
+                            
+                            </label>
                         </li>
                         <li>
                             <div>
@@ -72,7 +81,7 @@
                     </ul>
                 </section>
                 <section class="plats">
-                    <h2>PLATS</h2>
+                    <h2 class="underline">PLATS</h2>
                     <ul>
                         <li>
                             <div>
@@ -104,7 +113,7 @@
                     </ul>
                 </section>
                 <section class="desserts">
-                    <h2>DESSERT</h2>
+                    <h2 class="underline">DESSERT</h2>
                     <ul>
                         <li>
                             <div>
@@ -137,8 +146,9 @@
                 </section>
             </div>
         </div>
+        <div class="btn-commander">
             <button>Commander</button>
-
+        </div>
             <footer>
                 <img src="../assets/images/logo/ohmyfood@2x.svg" alt="logo">
                 <div class="footer-list">

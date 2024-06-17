@@ -423,17 +423,44 @@ footer li.footer400 {
   background-color: #F6F6F6;
   bottom: 55px;
 }
-.entrees, .plats, .desserts {
+
+.entrees,
+.plats,
+.desserts {
   background-color: #F6F6F6;
 }
-.entrees h2, .plats h2, .desserts h2 {
+.entrees h2,
+.plats h2,
+.desserts h2 {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 300;
   line-height: 18.75px;
   text-align: left;
 }
-.entrees ul, .plats ul, .desserts ul {
+.entrees .underline,
+.plats .underline,
+.desserts .underline {
+  position: relative;
+  display: inline-block;
+}
+.entrees .underline::before,
+.plats .underline::before,
+.desserts .underline::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  /* Ajuste l'espace entre le texte et le soulignement */
+  width: 40px;
+  /* Définit la longueur du soulignement */
+  height: 3px;
+  /* Épaisseur du soulignement */
+  background-color: #99E2D0;
+  /* Couleur du soulignement */
+}
+.entrees ul,
+.plats ul,
+.desserts ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -441,7 +468,9 @@ footer li.footer400 {
   margin: 0;
   padding: 20px;
 }
-.entrees li, .plats li, .desserts li {
+.entrees li,
+.plats li,
+.desserts li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -458,9 +487,90 @@ footer li.footer400 {
   margin-bottom: 25px;
   background-color: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  padding-inline: 20px;
+  padding-left: 20px;
+  list-style-type: none;
 }
-.entrees li .title-menu, .plats li .title-menu, .desserts li .title-menu {
+.entrees li input[type=checkbox],
+.plats li input[type=checkbox],
+.desserts li input[type=checkbox] {
+  display: none;
+}
+.entrees li input[type=checkbox] + label,
+.plats li input[type=checkbox] + label,
+.desserts li input[type=checkbox] + label {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.entrees li input[type=checkbox]:checked + label .valid,
+.plats li input[type=checkbox]:checked + label .valid,
+.desserts li input[type=checkbox]:checked + label .valid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0px;
+  overflow: hidden;
+}
+.entrees li input[type=checkbox]:checked + label .div-price-menu,
+.plats li input[type=checkbox]:checked + label .div-price-menu,
+.desserts li input[type=checkbox]:checked + label .div-price-menu {
+  position: relative;
+  right: 0px;
+}
+.entrees li input[type=checkbox]:checked + label .div-price-menu-valid,
+.plats li input[type=checkbox]:checked + label .div-price-menu-valid,
+.desserts li input[type=checkbox]:checked + label .div-price-menu-valid {
+  right: 0px;
+}
+.entrees li .div-price-menu-valid,
+.plats li .div-price-menu-valid,
+.desserts li .div-price-menu-valid {
+  display: flex;
+  position: relative;
+  right: -15px;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.entrees li .valid,
+.plats li .valid,
+.desserts li .valid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  right: -100px;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  width: 80px;
+  height: 100%;
+  margin: 0px;
+  transition: all 0.5s ease-in-out;
+}
+.entrees li .div-price-menu,
+.plats li .div-price-menu,
+.desserts li .div-price-menu {
+  position: relative;
+  right: -50px;
+  padding: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.entrees li .menu-item,
+.plats li .menu-item,
+.desserts li .menu-item {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+}
+.entrees li .title-menu,
+.plats li .title-menu,
+.desserts li .title-menu {
   font-family: Roboto;
   font-size: 18px;
   font-weight: 500;
@@ -469,7 +579,9 @@ footer li.footer400 {
   margin: 0;
   margin-bottom: 5px;
 }
-.entrees li .text-menu, .plats li .text-menu, .desserts li .text-menu {
+.entrees li .text-menu,
+.plats li .text-menu,
+.desserts li .text-menu {
   font-family: Roboto;
   font-size: 14px;
   font-weight: 300;
@@ -477,7 +589,9 @@ footer li.footer400 {
   text-align: left;
   margin: 0;
 }
-.entrees li .price-menu, .plats li .price-menu, .desserts li .price-menu {
+.entrees li .price-menu,
+.plats li .price-menu,
+.desserts li .price-menu {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -533,4 +647,30 @@ footer li.footer400 {
 
 .hidden-checkbox:checked + .checkmark .checked {
   display: block;
+}
+
+.btn-commander {
+  display: flex;
+  justify-content: center;
+}
+.btn-commander button {
+  background-color: #9356DC;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center;
+  color: white;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  margin-top: -35px;
+  margin-bottom: 57px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  transition: box-shadow 400ms ease, background 400ms ease;
+}
+.btn-commander button:hover {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
 }/*# sourceMappingURL=styles.css.map */
