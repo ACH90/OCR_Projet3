@@ -522,7 +522,7 @@ footer li.footer400 {
 .plats li input[type=checkbox]:checked + label .div-price-menu-valid,
 .desserts li input[type=checkbox]:checked + label .div-price-menu-valid {
   right: 0px;
-  width: 120px;
+  width: 100px;
 }
 .entrees li .div-title-text-menu,
 .plats li .div-title-text-menu,
