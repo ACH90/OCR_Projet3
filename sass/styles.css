@@ -466,7 +466,7 @@ footer li.footer400 {
   flex-direction: column;
   align-items: center;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 .entrees li,
 .plats li,
@@ -487,7 +487,7 @@ footer li.footer400 {
   margin-bottom: 25px;
   background-color: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  padding-left: 20px;
+  padding-left: 15px;
   list-style-type: none;
 }
 .entrees li input[type=checkbox],
@@ -510,24 +510,36 @@ footer li.footer400 {
   justify-content: center;
   right: 0px;
   overflow: hidden;
+  width: 59px;
 }
 .entrees li input[type=checkbox]:checked + label .div-price-menu,
 .plats li input[type=checkbox]:checked + label .div-price-menu,
 .desserts li input[type=checkbox]:checked + label .div-price-menu {
   position: relative;
-  right: 0px;
+  right: 5px;
 }
 .entrees li input[type=checkbox]:checked + label .div-price-menu-valid,
 .plats li input[type=checkbox]:checked + label .div-price-menu-valid,
 .desserts li input[type=checkbox]:checked + label .div-price-menu-valid {
   right: 0px;
+  width: 120px;
+}
+.entrees li .div-title-text-menu,
+.plats li .div-title-text-menu,
+.desserts li .div-title-text-menu {
+  width: 260px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .entrees li .div-price-menu-valid,
 .plats li .div-price-menu-valid,
 .desserts li .div-price-menu-valid {
   display: flex;
   position: relative;
-  right: -15px;
+  align-items: center;
+  right: -20px;
+  width: 70px;
   height: 100%;
   transition: all 0.5s ease-in-out;
 }
@@ -543,7 +555,7 @@ footer li.footer400 {
   right: -100px;
   border-radius: 0 20px 20px 0;
   background-color: #99E2D0;
-  width: 80px;
+  width: 100px;
   height: 100%;
   margin: 0px;
   transition: all 0.5s ease-in-out;
@@ -552,9 +564,9 @@ footer li.footer400 {
 .plats li .div-price-menu,
 .desserts li .div-price-menu {
   position: relative;
-  right: -50px;
-  padding: 10px;
+  right: -7px;
   transition: all 0.5s ease-in-out;
+  width: 50%;
 }
 .entrees li .menu-item,
 .plats li .menu-item,
@@ -578,6 +590,9 @@ footer li.footer400 {
   text-align: left;
   margin: 0;
   margin-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .entrees li .text-menu,
 .plats li .text-menu,
@@ -588,13 +603,14 @@ footer li.footer400 {
   line-height: 16.41px;
   text-align: left;
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .entrees li .price-menu,
 .plats li .price-menu,
 .desserts li .price-menu {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
   font-family: Roboto;
   font-size: 15.04px;
   font-weight: 700;
