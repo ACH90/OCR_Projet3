@@ -31,6 +31,24 @@ $font-text: 'Roboto', sans-serif;
     flex-direction: column;
     width: 100%;
 
+    .picture {
+        width: 100%;
+        height: 255px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .picture {
+            height: 383px;
+        }
+        
+    }
+
     h1 {
         font-family: "Shrikhand";
         font-weight: 400;
@@ -431,31 +449,35 @@ $font-text: 'Roboto', sans-serif;
     animation-delay: 0.5s;
   }
   .entrees li:nth-child(2) {
-    animation-delay: 1s;
+    animation-delay: 0.5s;
   }
   .entrees li:nth-child(3) {
-    animation-delay: 1.5s;
+    animation-delay: 0.5s;
   }
+  .entrees li:nth-child(4) {
+    animation-delay: 0.5s;
+  }
+
   
   /* Délais pour les plats */
   .plats li:nth-child(1) {
-    animation-delay: 2s;
+    animation-delay: 1.5s;
   }
   .plats li:nth-child(2) {
-    animation-delay: 2.5s;
+    animation-delay: 1.5s;
   }
   .plats li:nth-child(3) {
-    animation-delay: 3s;
+    animation-delay: 1.5s;
   }
   
   /* Délais pour les desserts */
   .desserts li:nth-child(1) {
-    animation-delay: 3.5s;
+    animation-delay: 2.5s;
   }
   .desserts li:nth-child(2) {
-    animation-delay: 4s;
+    animation-delay: 2.5s;
   }
   .desserts li:nth-child(3) {
-    animation-delay: 4.5s;
+    animation-delay: 2.5s;
   }
   
