@@ -89,7 +89,6 @@ h2 {
   
     button {
       background-color: $color-primary;
-      //styleName: Button;
       font-size: 16px;
       font-weight: 500;
       line-height: 18.75px;
@@ -227,10 +226,7 @@ h2 {
       .cards {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
-        // margin-inline: 180px;
-        // width: 1080px;
-  
+        justify-content: space-between;  
       }
     }
   
@@ -311,7 +307,7 @@ h2 {
           padding-bottom: 12px;
         }
       }
-  
+  //Animation du coeur
       .hidden-checkbox {
         display: none;
       }

@@ -72,7 +72,6 @@ $font-text: 'Roboto', sans-serif;
         border-radius: 50px 50px 0 0;
         background-color: #F6F6F6;
         bottom: 55px;
-        // top: 55px;
 
         @media screen and (min-width: 1024px) {
             .infos {
@@ -115,6 +114,8 @@ $font-text: 'Roboto', sans-serif;
     }
     
 }
+
+// Plats et selecteurs de plats
 
 .entrees,
 .plats,
@@ -257,7 +258,6 @@ $font-text: 'Roboto', sans-serif;
         .div-price-menu {
             position: relative;
             right: -7px;
-            // padding-right: 10px;
             -webkit-transition: all .5000s ease-in-out;
             transition: all .5000s ease-in-out;
             width: 50%;
@@ -301,8 +301,6 @@ $font-text: 'Roboto', sans-serif;
 
         .price-menu {
             display: flex;
-            // justify-content: flex-end;
-            // align-items: flex-end;
             font-family: Roboto;
             font-size: 15.04px;
             font-weight: 700;
@@ -316,12 +314,6 @@ $font-text: 'Roboto', sans-serif;
 
 
     }
-    // @media screen and (min-width: 768px) {
-    //     li {
-    //         width: 100%;
-    //     }
-        
-    // }
 }
 
 @media screen and (min-width: 1024px) {
@@ -398,7 +390,6 @@ $font-text: 'Roboto', sans-serif;
 
     button {
         background-color: $color-primary;
-        //styleName: Button;
         font-size: 16px;
         font-weight: 500;
         line-height: 18.75px;
@@ -445,39 +436,15 @@ $font-text: 'Roboto', sans-serif;
   }
   
   /* Délais pour les entrées */
-  .entrees li:nth-child(1) {
+  .entrees li {
     animation-delay: 0.5s;
-  }
-  .entrees li:nth-child(2) {
-    animation-delay: 0.5s;
-  }
-  .entrees li:nth-child(3) {
-    animation-delay: 0.5s;
-  }
-  .entrees li:nth-child(4) {
-    animation-delay: 0.5s;
-  }
-
-  
+  }  
   /* Délais pour les plats */
-  .plats li:nth-child(1) {
+  .plats li {
     animation-delay: 1.5s;
   }
-  .plats li:nth-child(2) {
-    animation-delay: 1.5s;
-  }
-  .plats li:nth-child(3) {
-    animation-delay: 1.5s;
-  }
-  
   /* Délais pour les desserts */
-  .desserts li:nth-child(1) {
-    animation-delay: 2.5s;
-  }
-  .desserts li:nth-child(2) {
-    animation-delay: 2.5s;
-  }
-  .desserts li:nth-child(3) {
+  .desserts li{
     animation-delay: 2.5s;
   }
   
